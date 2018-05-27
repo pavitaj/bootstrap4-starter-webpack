@@ -1,2 +1,4 @@
 import 'bootstrap';
-import url from './scss/app.scss';
+import './scss/app.scss';
+import './js/script.js';
+

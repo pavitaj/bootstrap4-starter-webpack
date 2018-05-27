@@ -1,3 +1,4 @@
+const webpack = require('webpack')
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
@@ -31,6 +32,11 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'assets/css/style.css'
+    }),
+    new webpack.ProvidePlugin({
+      $: "jquery", // Used for Bootstrap JavaScript components
+      jQuery: "jquery", // Used for Bootstrap JavaScript components
+      Popper: ['popper.js', 'default'] // Used for Bootstrap dropdown, popup and tooltip JavaScript components
     })
   ],
   module: {
