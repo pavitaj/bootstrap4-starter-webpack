@@ -2,10 +2,10 @@ const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  mode: 'none',
+  mode: 'production',
   entry: './src/app.js',
   output: {
-    filename: 'bundle.js',
+    filename: './assets/js/bundle.js',
     path: path.resolve(__dirname, 'build')
   },
   devServer: {
@@ -16,12 +16,21 @@ module.exports = {
     publicPath: '/', // Live-reload
     watchContentBase: true
   },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        styles: {
+          name: 'styles',
+          test: /\.css$/,
+          chunks: 'all',
+          enforce: true
+        }
+      }
+    }
+  },
   plugins: [
     new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // both options are optional
-      filename: "[name].css",
-      chunkFilename: "[id].css"
+      filename: 'assets/css/style.css'
     })
   ],
   module: {
@@ -34,7 +43,7 @@ module.exports = {
         }
       },
       {
-        test: /\.(sass|scss|css)$/,
+        test: /\.(scss)$/,
         use: [
           MiniCssExtractPlugin.loader,
           {
