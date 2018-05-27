@@ -1,5 +1,4 @@
 # Bootstrap4 Project starter pack 
----------------------------------------------
 
 To start server
 ```
