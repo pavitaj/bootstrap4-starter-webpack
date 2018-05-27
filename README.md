@@ -1,3 +1,11 @@
-Bootstrap4 Project starter pack 
----------------------------------------------
-run npm install to install then npm run start to start server
+# Bootstrap4 Project starter pack 
+
+Required 
+```
+npm install
+```
+
+To start server
+```
+npm run start
+```
