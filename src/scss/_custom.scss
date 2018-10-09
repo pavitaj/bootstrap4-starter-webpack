@@ -1,3 +1,9 @@
 // Customize Your Bootstrap 4 Variable, etc.
 // Example: change body color
 // $body-bg: $gray-900;
+
+// Webfont Anti aliased
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
