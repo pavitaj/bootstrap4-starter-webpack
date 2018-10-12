@@ -1,4 +1,4 @@
-const webpack = require('webpack')
+const webpack = require('webpack');
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
@@ -45,7 +45,7 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
-          presets: ['es2015']
+          presets: ['@babel/preset-env']
         }
       },
       {
