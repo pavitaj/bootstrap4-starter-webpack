@@ -2,10 +2,15 @@
 
 Required 
 ```
-npm install
+yarn install
+```
+
+Build
+```
+yarn build
 ```
 
 To start server
 ```
-npm run start
+yarn start
 ```
