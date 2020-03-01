@@ -43,10 +43,9 @@ module.exports = {
     rules: [
       {
         exclude: /node_modules/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['@babel/preset-env']
-        }
+        use: [{
+          loader: 'babel-loader'
+        }]
       },
       {
         test: /\.(scss)$/,
